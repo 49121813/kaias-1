@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Capriola&family=Noto+Sans+Buhid&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class= logoHeader src="bbbb.png" alt="Kaias">
+    </header>
+    <img class= imgInicio src="imagendeinicio.png" alt="Foto Cute">
+    <p class="bienvenida">ESTA ES LA WEB OFICIAL<br>DE LAS KAIAS!</p>
+    <a class="btnMerch" href="compras.html">encontrá nuestra<br>merch acá!</a>
+    <p class="---">------------------------------</p>
+
+    <div class="galeria">
+        <div class="borde-interno">
+            <img class="fotico" src="fotoInicio1.jpeg">
+        </div>
+        <img class="corazon" src="corazon.png">
+        <div class="borde-interno">
+            <img class="fotico" src="fotoInicio2.jpeg">
+        </div>
+        <img class="corazon" src="corazon.png">
+        <div class="borde-interno">
+            <img class="fotico" src="fotoInicio3.jpeg">
+        </div>
+        <img class="corazon" src="corazon.png">
+        <div class="borde-interno">
+            <img class="fotico" src="fotoInicio4.jpeg">
+        </div>
+        <img class="corazon" src="corazon.png">
+        <div class="borde-interno">
+            <img class="fotico" src="fotoInicio5.jpeg">
+        </div>
+        <img class="corazon" src="corazon.png">
+        <div class="borde-interno">
+            <img class="fotico" src="fotoInicio6.jpeg">
+        </div>
+    </div>
+
+    <p class="stalker">stalker!</p>
+
+    <footer>
+        <p class="brand"> © 2025 Kaias. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let ultimoScroll = 0;
+        const header = document.querySelector("header");
+        
+        window.addEventListener("scroll", () => {
+            let scrollActual = window.scrollY;
+
+        if (scrollActual > ultimoScroll) {
+            header.style.top = "-100px";
+        } else {
+            header.style.top = "0";
+        }
+        ultimoScroll = scrollActual;
+        });
+    </script>
+</body>
+</html>

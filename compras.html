@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Capriola&family=Noto+Sans+Buhid&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class= logoHeader src="bbbb.png" alt="Kaias">
+    </header>
+    
+    <div class="arriba">
+        <a class="link-compras" href="compras.html">/productos</a>
+    </div>
+    
+    <div class="todos-productos">
+        <div class="uno-producto">
+            <div class="gris">
+                <img src="newdrop.png">
+            </div>
+            
+            <div class="centrarBtn">
+                <div id="cuenta-regresiva">00h:00m:00s</div>
+            </div>
+        </div>
+        
+        <div class="uno-producto">
+            <div class="gris">
+                <img src="remera.png">
+            </div>
+            <p class="nombre">REMERA "KAIAS"</p>
+            <p class="cringe">100% algodón, 100% cool.</p>
+            <div class="centrarBtn">
+                <a href="remera.html" class="btn-lo-quiero">LO QUIERO</a>
+            </div>
+        </div>
+
+        <div class="uno-producto">
+            <div class="gris">
+                <img src="fotostickers.png">
+            </div>
+            <p class="nombre">PLANCHA DE STICKERS</p>
+            <p class="cringe">Hace de tus pertenencias muuy cute.</p>
+            <div class="centrarBtn">
+                <a href="stickers.html" class="btn-lo-quiero">LO QUIERO</a>
+            </div>
+        </div>
+
+        <div class="uno-producto">
+            <div class="gris">
+                <img src="silbato.png">
+            </div>
+            <p class="nombre">SILBATOS</p>
+            <p class="cringe">Para que tu veo-veo tenga estilo.</p>
+            <div class="centrarBtn">
+                <a href="silbatos.html" class="btn-lo-quiero">LO QUIERO</a>
+            </div>
+        </div>
+
+        <div class="uno-producto">
+            <div class="gris">
+                <img src="bikini.png">
+            </div>
+            <p class="nombre">BIKINI</p>
+            <p class="cringe">Para estar re pink en la pileta.</p>
+            <div class="centrarBtn">
+                <a href="bikini.html" class="btn-lo-quiero">LO QUIERO</a>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+    <footer>
+        <p class="brand"> © 2025 Kaias. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let ultimoScroll = 0;
+        const header = document.querySelector("header");
+        
+        window.addEventListener("scroll", () => {
+            let scrollActual = window.scrollY;
+
+        if (scrollActual > ultimoScroll) {
+            header.style.top = "-100px";
+        } else {
+            header.style.top = "0";
+        }
+        ultimoScroll = scrollActual;
+        });
+
+        const ahora = new Date();
+  const manana = new Date(ahora.getFullYear(), ahora.getMonth(), ahora.getDate() + 1, 15, 0, 0); // mañana a las 15 hs
+
+const div = document.getElementById("cuenta-regresiva");
+
+const intervalo = setInterval(() => {
+    const ahora = new Date();
+    const diferencia = manana - ahora;
+
+    if (diferencia <= 0) {
+    clearInterval(intervalo);
+    div.textContent = "¡Llegó el momento!";
+    return;
+    }
+
+    const totalHoras = Math.floor(diferencia / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    div.textContent = `${totalHoras}h : ${minutos.toString().padStart(2, '0')}m : ${segundos.toString().padStart(2, '0')}s`;
+}, 1000);
+
+    </script>
+</body>
+</html>

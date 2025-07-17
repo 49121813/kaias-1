@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Capriola&family=Noto+Sans+Buhid&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class= logoHeader src="bbbb.png" alt="Kaias">
+    </header>
+    
+    <div class="arriba">
+        <a class="link-compras" href="compras.html">/productos/plancha-de-stickers</a>
+    </div>
+    
+    <div class="fondo">
+        <img class= "foto" src="fotostickers.png">
+    </div>
+    <div class="texto">
+        <p class="nombre">PLANCHA DE STICKERS</p>
+        <p class="cringe">Hace de tus pertenencias muuy cute</p>
+    </div>
+
+    <div class="sold-out">SOLD OUT</div>
+
+    <div class="texto">
+
+        <p id="toggleTexto">v Descripción</p>
+        <div id="textoOculto" style="display: none;">
+            <p>Bueee tampoco la ibamos a vivir tanto.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p class="brand"> © 2025 Kaias. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+
+    const toggle = document.getElementById("toggleTexto");
+    const texto = document.getElementById("textoOculto");
+
+    toggle.addEventListener("click", () => {
+        if (texto.style.display === "none") {
+        texto.style.display = "block";
+        toggle.textContent = "^ Descripción";
+        } else {
+        texto.style.display = "none";
+        toggle.textContent = "v Descripción";
+        }
+    });
+
+    </script>
+</body>
+</html>
